@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Image Coloring with DFS and BFS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        .video-container {
+            display: inline-block;
+            margin: 20px;
+        }
+
+        video {
+            width: 500px; /* Increase the width */
+            height: 300px; /* Increase the height */
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Image Coloring using DFS and BFS</h1>
+
+        <div class="video-container">
+            <h2>DFS</h2>
+            <video id="dfsVideo" controls>
+                <source src="DFS.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <button id="dfsButton">Play DFS</button>
+        </div>
+
+        <div class="video-container">
+            <h2>BFS</h2>
+            <video id="bfsVideo" controls>
+                <source src="BFS.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <button id="bfsButton">Play BFS</button>
+        </div>
+
+        <button id="playBothButton">Play Both Videos</button>
+    </div>
+
+    <script>
+        const dfsVideo = document.getElementById('dfsVideo');
+        const bfsVideo = document.getElementById('bfsVideo');
+        const dfsButton = document.getElementById('dfsButton');
+        const bfsButton = document.getElementById('bfsButton');
+        const playBothButton = document.getElementById('playBothButton');
+
+        dfsButton.addEventListener('click', () => {
+            dfsVideo.play();
+        });
+
+        bfsButton.addEventListener('click', () => {
+            bfsVideo.play();
+        });
+
+        playBothButton.addEventListener('click', () => {
+            dfsVideo.play();
+            bfsVideo.play();
+        });
+    </script>
+</body>
+</html>
